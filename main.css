@@ -1,0 +1,27 @@
+body{
+    background-color: Lavender;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+}
+header{
+    background-color: Thistle;
+    color: black;
+    font-family: Georgia;
+    margin: 3px;
+}
+footer{
+    background-color: Thistle;
+    color: black;
+    font-family: Georgia;
+    margin: 3px;
+}
+main{
+    background-color: Lavender;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
