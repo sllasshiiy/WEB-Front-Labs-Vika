@@ -15,12 +15,18 @@ footer{
     color: black;
     font-family: Georgia;
     margin: 3px;
+    padding: 10px;
+    font-size: 16pt;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 main{
     background-color: Lavender;
     color: black;
     font-family: Arial;
-    margin: 0px;
+    margin: 10px 20px 45px;
 }
 a{
     color:green;
@@ -30,7 +36,6 @@ a{
 a:hover{
     color: rgb(149, 28, 28);
     text-decoration:underline;
-    background-color: azure;
     transition: 0.3s;
 }
 a:active{
@@ -46,4 +51,14 @@ a:visited{
     color: rgb(122, 21, 148);
     font-style:normal;
     font-family:monospace;
+}
+div.menu{
+    border: 7px solid #14b0c180;
+    border-radius: 7px;
+    width: 300px;
+    margin: 0 auto;
+}
+div.menu:hover {
+    background-color: #4d9ebc30;
+    box-shadow: 0 0 20px #a03dca30;
 }
