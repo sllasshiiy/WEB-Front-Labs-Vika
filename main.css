@@ -25,3 +25,22 @@ main{
 a{
     text-decoration: none;
 }
+a:hover{
+    color: rgb(196, 178, 247);
+    text-decoration:underline;
+    background-color: azure;
+}
+a:active{
+    color: black;
+    opacity: 0.8;
+}
+a:link{
+    color: rgb(30, 88, 117);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+a:visited{
+    color: rgb(122, 21, 148);
+    font-style:normal;
+    font-family:monospace;
+}
