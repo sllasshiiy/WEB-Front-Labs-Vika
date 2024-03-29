@@ -23,12 +23,15 @@ main{
     margin: 0px;
 }
 a{
+    color:green;
     text-decoration: none;
+    transition: 1s 2s;
 }
 a:hover{
-    color: rgb(196, 178, 247);
+    color: rgb(149, 28, 28);
     text-decoration:underline;
     background-color: azure;
+    transition: 0.3s;
 }
 a:active{
     color: black;
