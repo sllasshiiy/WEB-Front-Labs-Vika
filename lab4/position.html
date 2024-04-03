@@ -17,12 +17,13 @@
             background-color: white;
             border: 1px dotted darkgreen;
             margin: 15px;
+            z-index: 1;
         }
         .position-relative{
             position: relative;
             right: -160px;
             top: -130px;
-            z-index: 1;
+            z-index: 0;
         }
         .static{
             position: static;
@@ -36,11 +37,16 @@
             background-color: #f0a8a8;
             transition: all 0.3s ease;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 3;
         }
         .position-absolute:hover {
             transform: scale(1.1);
             background-color: #3f2ad9;
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        footer{
+            position: bottom;
+            z-index: 10;
         }
     </style>
 </head>
