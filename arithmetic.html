@@ -15,6 +15,14 @@
             let result=a+b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+        function showAuthor(){
+            let author='Автор страницы: \nЗагородняя Виктория Артемовна';
+            alert(author);
+        }
+        function showHI(){
+            let hi='Добро пожаловать на мою страницу! \nПросьба не тыкать лишний раз никуда и не дышать, иначе может перестать работать!';
+            alert(hi);
+        }
     </script>
     <style>
         .message{
@@ -33,16 +41,16 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()" style="cursor: pointer;">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать,кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать,кто автор страницы</div>
     </main>
     
-    <footer>
+    <footer ondblclick="showHI()" style="cursor: pointer;">
         &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
     </footer>
 </body>
