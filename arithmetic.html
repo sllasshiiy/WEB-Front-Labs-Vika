@@ -53,8 +53,20 @@
             let hi='Добро пожаловать на мою страницу! \nПросьба не тыкать лишний раз никуда и не дышать, иначе может перестать работать!';
             alert(hi);
         }
+        function changeOutput(buttonNum, backColor, textColor,boxWidth){
+            let output=document.getElementById('output');
+            output.innerHTML='Нажата кнопка ' + buttonNum
+            output.style.backgroundColor=backColor;
+            output.style.color=textColor;
+            output.style.borderWidth=boxWidth;
+        }
     </script>
     <style>
+        #output{
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
         .message{
             display: inline-block;
             cursor: pointer;
@@ -83,6 +95,14 @@
         <div class="message" onclick="showP()">Найти произведение чисел</div>
         <div class="message" onclick="showD()">Найти деление чисел</div>
         <div class="message" onclick="showAuthor()">Узнать,кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'yellow','red','2px')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2,'black','lime','10px')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3,'white','purple','20px')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4,'pink','black','40px')">
+        </div>
+        <div id="output"></div>
     </main>
     
     <footer ondblclick="showHI()" style="cursor: pointer;">
