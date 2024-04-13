@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+<script>
+function calculateresult() {
+  let apple = document.getElementById('apple').value || 0;
+  let pears = document.getElementById('pears').value || 0;
+  let oranges = document.getElementById('oranges').value || 0;
+  let melons = document.getElementById('melons').value || 0;  
+  let result = (apple * 100) + (pears * 80) + (oranges * 150) + (melons * 300) ;
+  
+  document.getElementById('result').innerText = `Общий результат: ${result} руб`;
+}
+function clear() {
+  document.getElementById('apple').value = '';
+  document.getElementById('pears').value = '';
+  document.getElementById('oranges').value = '';
+  document.getElementById('melons').value = '';  
+  document.getElementById('result').innerText = ''; 
+}
+</script>
+<style>
+    .item{
+        margin: 10px;
+        border: 3px solid;
+        padding: 5px;
+        width: auto;
+        height: auto;
+        overflow:auto;
+        background-color: rgba(48, 178, 248, 0.535);
+        text-align: center;
+    }
+    p{
+        color: rgb(139, 16, 16);
+    }
+</style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+<main>
+<h1>Корзина товаров</h1>
+
+<div class="item">
+  <p>Яблоки (100р/шт):</p>
+  <input type="number" min="0" placeholder="Кол-во яблок" id="apple">
+</div>
+
+<div class="item">
+  <p>Груши (80р/шт):</p>
+  <input type="number" min="0" placeholder="Укажите кол-во груш" id="pears">
+</div>
+
+<div class="item">
+  <p>Апельсины (150р/шт):</p>
+  <input type="number" min="0" placeholder="Укажите кол-во апельсинов" id="oranges">
+</div>
+
+<div class="item">
+  <p>Дыни (300р/шт):</p>
+  <input type="number" min="0" placeholder="Укажите кол-во дынь" id="melons">
+</div>
+
+<button onclick="calculateresult()">Рассчитать</button>
+<button onclick="clear()">Очистить</button>
+
+<p id="result"></p>
+</main>
+<footer>
+    &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+</footer>
+</body>
+</html>
