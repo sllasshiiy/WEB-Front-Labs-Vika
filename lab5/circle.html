@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Загородняя Виктория. Лабораторная работа №5</title>
+<link rel="stylesheet" href="../main.css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon.16*16.png">
+<link rel="icon" href="../favicon.32x32.png">
+<title>Круги</title>
+<style>
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+}
+
+.circle1 { background-color: red;width: 80px; height: 80px; position: absolute;   }
+.circle2 { background-color: blue; width: 100px; height: 100px;position: absolute;  }
+.circle3 { background-color: green; width: 70px; height: 70px;position: absolute;  }
+.circle4 { background-color: yellow; width: 220px; height: 220px;position: absolute;  }
+.circle5 { background-color: purple; width: 130px; height: 140px;position: absolute;  }
+.circle6 { background-color: pink;width: 150px; height: 150px;position: absolute;   }
+.circle7 { background-color: orange; width: 105px; height: 105px;position: absolute;  }
+.circle8 { background-color: cyan; width: 160px; height: 160px;position: absolute;  }
+.circle9 { background-color: brown; width: 70px; height: 70px;position: absolute;  }
+.circle10 { background-color: gray; width: 40px; height: 40px;position: absolute;}
+</style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+<main>
+<div class="circle circle1" style="top: 250px; left: 450px;">1</div>
+<div class="circle circle2"style="top: 170px; left: 150px;">2</div>
+<div class="circle circle3"style="top: 110px; left: 730px;">3</div>
+<div class="circle circle4"style="top: 388px; left: 1060px;">4</div>
+<div class="circle circle5"style="top: 514px; left: 355px;">5</div>
+<div class="circle circle6"style="top: 316px; left: 597px;">6</div>
+<div class="circle circle7"style="top: 52px; left: 223px;">7</div>
+<div class="circle circle8"style="top: 430px; left: 800px;">8</div>
+<div class="circle circle9"style="top: 106px; left: 492px;">9</div>
+<div class="circle circle10"style="top: 410px; left: 465px;">10</div>
+
+<button onclick="resetCircle()">Обнулить</button>
+</main>
+<footer>
+    &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+</footer>
+<script>
+const circles = document.querySelectorAll('.circle');
+circles.forEach(circle => {
+  circle.addEventListener('click', () => {
+    circle.style.transition = 'all 1s';
+    circle.style.opacity = 0;
+    circle.style.width = '0px';
+    circle.style.height = '0px';
+  });
+});
+
+function resetCircle() {
+    circles.forEach(circle => {
+    circle.style.transition = 'all 0s';
+    circle.style.opacity = 1;
+    circle.style.width = '110px';
+    circle.style.height = '100px';
+  });
+}
+</script>
+</body>
+</html>
