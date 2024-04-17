@@ -24,6 +24,11 @@
             document.getElementById('contrastOutput').innerText=value;
             document.getElementById('Image').style.filter='contrast(' + value + ')';
         }
+        function grayscaleChange(){
+            let value=document.getElementById('grayscaleValue').value+'%';
+            document.getElementById('grayscaleOutput').innerText=value;
+            document.getElementById('Image').style.filter='grayscale(' + value + ')';
+        }
     </script>
 </head>
 <body>
@@ -45,6 +50,11 @@
         Фильтр contrast:
         <input type="range" min="0" max="500" value="100" onchange="contrastChange()" id="contrastValue">
         <span id="contrastOutput"></span>
+    </div>
+    <div>
+        Фильтр grayscale:
+        <input type="range" min="0" max="100" value="0" onchange="grayscaleChange()" id="grayscaleValue">
+        <span id="grayscaleOutput"></span>
     </div>
     <div><img src="e2bbe42ee1f53f0f6bf7077ec0f2f40e.jpg" id="Image"></div>
 </main>
