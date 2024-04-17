@@ -34,6 +34,11 @@
             document.getElementById('huerotateOutput').innerText=value;
             document.getElementById('Image').style.filter='huerotate(' + value + ')';
         }
+        function invertChange(){
+            let value=document.getElementById('invertValue').value+'%';
+            document.getElementById('invertOutput').innerText=value;
+            document.getElementById('Image').style.filter='invert(' + value + ')';
+        }
     </script>
 </head>
 <body>
@@ -63,8 +68,13 @@
     </div>
     <div>
         Фильтр hue-rotate:
-        <input type="range" min="0" max="360" value="10" onchange="huerotateChange()" id="huerotateValue">
+        <input type="range" min="0" max="360" value="0" onchange="huerotateChange()" id="huerotateValue">
         <span id="huerotateOutput"></span>
+    </div>
+    <div>
+        Фильтр invert:
+        <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
+        <span id="invertOutput"></span>
     </div>
     <div><img src="e2bbe42ee1f53f0f6bf7077ec0f2f40e.jpg" id="Image"></div>
 </main>
