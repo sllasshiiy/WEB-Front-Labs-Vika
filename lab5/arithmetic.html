@@ -42,7 +42,12 @@
 
             let a=parseInt(inputA.value);
             let b=parseInt(inputB.value);
-            let result=a/b;
+            if (b=='0') {
+                alert('На ноль делить нельзя!')
+            }
+            else{
+                let result=a/b;
+            }
             alert('Деление '+ a + ' и '+ b + ' равно '+ result);
         }
         function showAuthor(){
