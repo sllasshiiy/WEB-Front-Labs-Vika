@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина товаров</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        table,td,th{
+            border: 3px solid;
+
+        }
+        td,th{
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function OK(){
+            let input=document.getElementById('balance');
+            let balance=parseInt(input.value);
+            let milk = document.getElementById('milk').value || 0;
+            let bread = document.getElementById('bread').value || 0;
+            let butter = document.getElementById('butter').value || 0;  
+            let cheese = document.getElementById('cheese').value || 0;  
+            let sugar = document.getElementById('sugar').value || 0;  
+            let tea = document.getElementById('tea').value || 0;  
+            let potato = document.getElementById('potato').value || 0;  
+            let apple = document.getElementById('apple').value || 0;  
+            let result = (milk * 90) + (bread * 50) + (butter * 150) + (cheese * 200) + (sugar * 80)+ (tea * 120)+ (potato * 89)+ (apple * 170);
+            if (milk<0 || bread<0 || butter<0 || cheese<0 || sugar<0 || tea<0 || potato<0 || apple<0){
+            alert('Кол-во товаров не может быть отрицательным!');
+            }
+            else if (result>balance || result==balance){
+            document.getElementById('Mistake').innerText = `У вас недостаточно средств!`;
+            }
+            else if (milk=='' && bread=='' && butter=='' &&  cheese=='' &&  sugar=='' &&  tea=='' &&  potato=='' && apple==''){
+            alert('Нужно выбрать хотя бы один товар');}
+            else{
+                document.getElementById('result').innerText = `Итог: ${result} руб. Оплата прошла, можете забрать покупки с кассы.`;
+            }  
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    <main>
+        <div class="b">
+            <p>Мой баланс:</p><input type="number" placeholder="Укажите свой баланс" id="balance">
+          </div><br>
+          <table>
+            <tr>
+                <th></th>
+                <th >Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Молоко</td>
+                <td>90 р</td>
+                <td><input type="number" placeholder="Укажите кол-во товаров" id="milk"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Хлеб белый</td>
+                <td>50 р</td>
+                <td><input type="number" placeholder="Укажите кол-во товаров" id="bread"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Масло, 200 гр </td>
+                <td>150 р</td>
+                <td><input type="number" placeholder="Укажите кол-во товаров" id="butter"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Сыр, 200 гр</td>
+                <td>200 р</td>
+                <td><input type="number" placeholder="Укажите кол-во товаров" id="cheese"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Сахар, 1 кг</td>
+                <td>80 р</td>
+                <td><input type="number" placeholder="Укажите кол-во товаров" id="sugar"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Чай</td>
+                <td>120 р</td>
+                <td><input type="number"   placeholder="Укажите кол-во товаров" id="tea"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Картошка, 2 кг</td>
+                <td>89 р</td>
+                <td><input type="number"   placeholder="Укажите кол-во товаров" id="potato"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Яблоки, 500 гр</td>
+                <td>170 р</td>
+                <td><input type="number"   placeholder="Укажите кол-во товаров" id="apple"></td>
+            </tr>
+          </table><br>
+          <button onclick="OK()">ОК</button>
+          <p id="result"></p>
+          <p id="Mistake" style="color: red; font-size: large;"></p>
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
