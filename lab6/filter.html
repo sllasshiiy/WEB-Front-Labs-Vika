@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перебор цветов</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+    </style>
+    <script>
+        function filter(){
+            let color=document.getElementById('wear-color').value;
+            let type=document.getElementById('wear-type').value;
+            let wear=document.getElementById('wear');
+
+            if(color=='Черный' && type=='Футболка'){
+                wear.src='black-t.jpg';
+            }
+            else if(color=='Бежевый' && type=='Футболка'){
+                wear.src='beg-t.jpg';
+            }
+            else if(color=='Белый' && type=='Футболка'){
+                wear.src='white-t.jpg';
+            }
+            else if(color=='Белый' && type=='Брюки'){
+                wear.src='white-b.jpg';
+            }
+            else if(color=='Черный' && type=='Брюки'){
+                wear.src='black-b.jpg';
+            }
+            else if(color=='Бежевый' && type=='Брюки'){
+                wear.src='beg-b.jpg';
+            }
+            else if(color=='Белый' && type=='Майка'){
+                wear.src='white-m.jpg';
+            }
+            else if(color=='Черный' && type=='Майка'){
+                wear.src='black-m.jpg';
+            }
+            else if(color=='Бежевый' && type=='Майка'){
+                wear.src='beg-m.jpg';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    <main>
+       <div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Бежевый</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Брюки</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">ОК</button><br>
+
+            <img id="wear">
+       </div>
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
