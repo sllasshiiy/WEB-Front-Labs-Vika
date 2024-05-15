@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перебор цветов</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        .color{
+            background-color: rgb(74, 74, 240);
+            color: white;
+            padding: 10px;
+            border-radius: 10px solid;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function ChangeColor(div){
+            if (div.style.backgroundColor=='blue'){
+            div.style.backgroundColor='red';
+            document.getElementById('color-name').innerHTML='красный';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        else if(div.style.backgroundColor=='red'){
+            div.style.backgroundColor='black';
+            document.getElementById('color-name').innerHTML='черный';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        else if(div.style.backgroundColor=='black'){
+            div.style.backgroundColor='pink';
+            document.getElementById('color-name').innerHTML='розовый';
+            div.style.color='black';
+            div.style.transition='2s';
+        }
+        else if(div.style.backgroundColor=='pink'){
+            div.style.backgroundColor='orange';
+            document.getElementById('color-name').innerHTML='оранжевый';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        else if(div.style.backgroundColor=='orange'){
+            div.style.backgroundColor='purple';
+            document.getElementById('color-name').innerHTML='фиолетовый';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        else if(div.style.backgroundColor=='purple'){
+            div.style.backgroundColor='green';
+            document.getElementById('color-name').innerHTML='зеленый';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        else{
+            div.style.backgroundColor='blue';
+            document.getElementById('color-name').innerHTML='голубой';
+            div.style.color='white';
+            div.style.transition='2s';
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    <main>
+        <div class="color" ondblclick="ChangeColor(this)">
+            Цвет:<span id="color-name">голубой</span><br>
+            Сделайте двойной щелчок, чтобы сменить цвет.
+        </div>
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
