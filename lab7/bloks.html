@@ -10,13 +10,20 @@
     <link rel="icon" href="../favicon.32x32.png">
     <script>
         function addNewBlock(){
-            let newBlock=document.createElement('div');
-            newBlock.style.backgroundColor='purple';
-            newBlock.style.marginTop='20px';
-            newBlock.style.border='5px solid';
-            newBlock.style.height='40px';
-            newBlock.style.width='50%';
-            document.querySelector('main').appendChild(newBlock);
+            let main=document.querySelector('main');
+            let k=document.getElementById("k").value;
+            for (let i=0;i<k;i++){
+                let newBlock=document.createElement('div');
+                newBlock.style.backgroundColor='purple';
+                newBlock.style.marginTop='20px';
+                newBlock.style.border='5px solid';
+                newBlock.style.height='40px';
+                newBlock.style.width=((i*50)+175)+'px';
+                newBlock.style.color='white';
+                newBlock.style.textAlign='center';
+                newBlock.innerHTML=`Блок № ${i+1}: 2*${i}<sup>2</sup>=${2*i**2}`;
+                main.appendChild(newBlock);
+            }
         }
     </script>
 </head>
@@ -27,6 +34,8 @@
 
     <main>
         <button onclick="addNewBlock()">Добавить блок</button>
+        <button onclick="addNewBlock()">Добавить блоки</button>
+        <input type="number" placeholder="Введите кол-во блоков" id="k">
     </main>
     
     <footer>
