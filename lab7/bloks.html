@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <script>
+        function addNewBlock(){
+            let newBlock=document.createElement('div');
+            newBlock.style.backgroundColor='purple';
+            newBlock.style.marginTop='20px';
+            newBlock.style.border='5px solid';
+            newBlock.style.height='40px';
+            newBlock.style.width='50%';
+            document.querySelector('main').appendChild(newBlock);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="addNewBlock()">Добавить блок</button>
+    </main>
+    
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
