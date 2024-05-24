@@ -74,6 +74,32 @@
                 main.appendChild(newBlock);
             }
         }
+        function addcolors(){
+            let main=document.querySelector('main');
+            let c=document.getElementById("c").value;
+            for(let i=c;i>=1;i--){
+                let newBlock=document.createElement('div');
+                if (i%2==0) {
+                    newBlock.style.background='lightyellow';
+                }
+                else{
+                    newBlock.style.background='lightpink';
+                }
+                newBlock.style.width='40px';
+                newBlock.style.margin='2px';
+                newBlock.style.height='40px';
+                newBlock.style.alignItems='center';
+                newBlock.style.textAlign='center';
+                newBlock.style.justifyContent='center';
+                newBlock.style.borderRadius='50%';
+                newBlock.style.color='black';
+                newBlock.style.border='2px solid';
+                newBlock.style.display='inline-block';
+                newBlock.style.fontSize='20px';
+                newBlock.innerHTML=`${i}`;
+                main.appendChild(newBlock);
+            }
+        }
     </script>
 </head>
 <body>
@@ -89,7 +115,10 @@
         <button onclick="addopacity()">Полупрозрачные блоки</button>
         <p>Введите кол-во блоков:</p>
         <input type="number" placeholder="Введите кол-во блоков" id="k">
-       
+       <br>
+       <br>
+       <input type="numbyr" placeholder="Введите кол-во блоков" id="c">
+       <button onclick="addcolors()">Желтое/Розовое</button>
     </main>
     
     <footer>
