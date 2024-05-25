@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <script>
+         function showExchange(){
+            const exchange=[
+                92.2914, 92.5254, 92.3058, 92.4155, 92.581,
+                92.7463, 93.2198, 93.7196, 93.4419
+            ];
+            let table=document.getElementById('dollar-table');
+            for (let i=0; i<exchange.length; i++){
+                let tr=document.createElement('tr');
+                let td=document.createElement('td');
+                td.innerText=exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+        }
+        function showAverage(){
+            const exchange=[
+                92.2914, 92.5254, 92.3058, 92.4155, 92.581,
+                92.7463, 93.2198, 93.7196, 93.4419
+            ];
+            let sum=0;
+            for(let i=0; i<exchange.length; i++){
+                sum+=exchange[i];
+            }
+            let average=sum/exchange.length;
+            average=average.toFixed(2);
+
+            let detail = document.createElement('div');
+            detail.innerText = `Среднее значение курса доллара: ${average}`;
+            document.body.appendChild(detail);
+            showAverage.style.display='none';
+            button.remove();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+
+    </main>
+    <button onclick="showExchange()">Курс доллара</button>
+    <table border="1" id="dollar-table"></table>
+    <div id="detail">
+        <button style="margin: 150px 0px 0px 700px;" onclick="showAverage()">Посчитать средний курс</button>
+    </div>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
