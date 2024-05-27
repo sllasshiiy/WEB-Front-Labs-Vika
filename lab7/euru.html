@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 50px; 
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+            font-family: Arial, sans-serif;
+        } 
+    </style>
+    <script>
+        function getEuroExchangeRate(){
+            fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+                .then(response => response.json())
+                .then(data => {
+                    const currentRate = data.Valute.EUR.Value.toFixed(2);
+                    const requestDate = data.Date;
+                
+                    const previousDate = new Date(requestDate);
+                    previousDate.setDate(previousDate.getDate() - 1);
+                    const previousDateString = previousDate.toISOString().split('T')[0];
+
+                    const previousRate = data.Valute.EUR.Previous.toFixed(2);
+                    const rateChange = currentRate > previousRate ? 'поднялся' : 'опустился';
+
+                    document.getElementById('currentRate').textContent = currentRate;
+                    document.getElementById('requestDate').textContent = requestDate;
+                    document.getElementById('previousRate').textContent = `${previousRate} (${previousDateString})`;
+                    document.getElementById('rateChange').textContent = `Курс евро ${rateChange}`;
+
+            })
+                .catch(error => console.error('Ошибка:', error));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <h1>Курс евро</h1>
+        <div class="info">
+            <p>Текущий курс евро: <span id="currentRate"></span></p>
+            <p>Дата запроса: <span id="requestDate"></span></p>
+            <p>Курс за прошлую дату: <span id="previousRate"></span></p>
+            <p>Разница: <span id="rateChange"></span></p>
+            <a href="https://www.cbr-xml-daily.ru/">Источник данных</a>
+        </div> 
+        <br>
+        <button onclick="getEuroExchangeRate()">Узнать курс евро</button>
+    
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
