@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <script>
+         function showTable() {
+            let dates = ['14.05.2024', '15.05.2024', '16.05.2024', '17.05.2024', '20.05.2024', '21.05.2024', '22.05.2024', '23.05.2024', '24.05.2024'];
+            let prices = [7670.00, 7640.00, 7691.00, 7865.50, 7800.00, 7804.50, 7837.00, 7861.00, 7750.00];
+            let table = "<table border='1'><tr><th>Дата</th><th>Цена акций</th><th>Разница</th></tr>";
+            let sum = 0;
+            let maxPrice = 0;
+            let minPrice = Number.MAX_VALUE;
+
+            for (let i = 0; i < prices.length; i++) {
+                table += "<tr><td>" + dates[i] + "</td><td>" + prices[i].toFixed(2) + "</td><td>";
+                if (i > 0) {
+                    let diff = prices[i] - prices[i - 1];
+                    table += diff.toFixed(2);
+                } else {
+                    table += "-";
+                }
+                table += "</td></tr>";
+                sum += prices[i];
+                if (prices[i] > maxPrice) {
+                    maxPrice = prices[i];
+                }
+                if (prices[i] < minPrice) {
+                    minPrice = prices[i];
+                }
+            }
+
+            let averagePrice = sum / prices.length;
+
+            table += "</table>";
+            table += "<p>Среднее значение стоимости акции: " + averagePrice.toFixed(2) + "</p>";
+            table += "<p>Максимальное значение стоимости акции: " + maxPrice.toFixed(2) + "</p>";
+            table += "<p>Минимальное значение стоимости акции: " + minPrice.toFixed(2) + "</p>";
+
+            document.getElementById("result").innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button style="margin: 0px 0px 20px 0px;" onclick="showTable()">Курс акций Лукойла</button>
+        <div id="result"></div> 
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
