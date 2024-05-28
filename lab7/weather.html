@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 50px; 
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+            font-family: Arial, sans-serif;
+        } 
+    </style>
+    <script>
+        function getWeather(){
+            const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tempAt8').textContent = data.data[0].temperature_2m + ' °C';
+                    document.getElementById('tempAt12').textContent = data.data[4].temperature_2m + ' °C';
+                    document.getElementById('tempAt20').textContent = data.data[10].temperature_2m + ' °C';
+                })
+            .catch(error => console.error('Произошла ошибка: ', error));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <h1>Температура Новосибирска</h1>
+        <div class="info">
+            <p>Температура в 8 утра: <span id="tempAt8"></span></p>
+            <p>Температура в 12 дня: <span id="tempAt12"></span></p>
+            <p>Температура в 20 вечера: <span id="tempAt20"></span></p>
+        </div> 
+        <br>
+        <button onclick="getWeather()">Узнать прогноз погоды</button>
+    
+    </main>
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
