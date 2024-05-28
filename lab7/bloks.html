@@ -10,6 +10,13 @@
     <link rel="icon" href="../favicon.32x32.png">
     <script>
         function addNewBlock(){
+            let newBlock=document.createElement('div');
+            newBlock.style.background='lightblue';
+            newBlock.style.height='40px';
+            newBlock.style.margin='10px';
+            document.querySelector('main').appendChild(newBlock);
+        }
+        function addNewBlocks(){
             let main=document.querySelector('main');
             let k=document.getElementById("k").value;
             for (let i=0;i<k;i++){
