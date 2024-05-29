@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориёнбонк</title>
+    <link rel="stylesheet" href="../mainrgz.css">
+    <link rel="shortcut icon" href="../faviconrgz.ico" type="image/x-icon">
+    <style>
+        .car{
+            background-color: white; 
+            height: 400px; 
+            width: 1150px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        h3{
+            display: inline;
+            margin: 0px 0px 0px 120px;
+        }
+        .mobile{
+            background-color: white; 
+            height: 328px; 
+            width: 640px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-90%, 70%);
+        }
+        .cart{
+            background-color: white; 
+            height: 328px; 
+            width: 440px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(30%, 70%);
+        }
+        .visible{
+            background-color: rgb(17, 17, 17); 
+            height: 200px; 
+            width: 400px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(30%, 280%);
+            opacity: 0;
+        }
+    </style>
+    <script>
+    function toggleMenu() {
+        let menuPanel = document.getElementById("menu-panel");
+        if (menuPanel.style.display === "none") {
+            menuPanel.style.display = "block";
+        } 
+        else {
+            menuPanel.style.display = "none";
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+    <img src="orion.png" alt="Ориёнбонк" style="margin: 0px 0px 0px 100px;">
+    <h3>Частным лицам</h3>
+    <h3>Крупный бизнес</h3>
+    <h3>Ориён-лизинг</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-panel" id="menu-panel">
+        <ul>
+            <li><a href="Company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="Contact_information.html">Контактная информация</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </div>
+    </header>
+    <div class="car">
+        <img src="rgzcar.png"  alt="Автокредит" style="height: 400px; width:550px; margin: 0px 0px 0px 550px; position: absolute; display: block;">
+        <h1 style="color: #0c0a09; font-size: 45px; margin: 80px 0px 0px 80px">Автокредит</h1>
+        <p style="color: #68625d; font-size: 27px; margin: 30px 0px 0px 80px">Автокредит-это кредит, который <br>обеспечивает вашу потребность в <br>транспортном средстве</p>
+    </div>
+    <div class="mobile">
+        <img src="mobile.png"  alt="Товары в кредит" width="260" height="310" style="margin: 0px 0px 0px 350px; position: absolute; display: block;" >
+        <h1 style="color: #0c0a09; font-size: 30px; margin: 55px 0px 0px 60px">Товары в кредит</h1>
+        <p style="color: #68625d; font-size: 25px; margin: 30px 0px 0px 60px">Это кредит, который <br>предоставляется для <br>удовлетворения соци-<br>альных нужд, граждан <br>страны</p>
+    </div>
+    <div class="cart">
+        <img src="visa.png"  alt="Товары в кредит" width="330" height="189" style="margin: 110px 0px 0px 65px; position: absolute; display: block;" >
+        <h1 style="color: #0c0a09; font-size: 27px; margin: 55px 0px 0px 100px">Банковские карты</h1>
+    </div>
+    <div class="visible">
+    </div>
+    <footer>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">Республика Таджикистан, г. Душанбе, проспект Рудаки 95/1</span> <img src="soc.png" height="47px" width="165px" style="margin: -15px 0px 0px 1300px; position: absolute; display: block;"><br>
+        <span style="margin: 0px 0px 0px 40px;">К/С: 20402972413691, ИНН: 020003038, БИК: 350101369</span><br>
+        <span style="margin: 0px 0px 0px 40px;">Эл. адрес: info@orienbank.tj</span>
+        <span style="margin: -20px 0px 0px 400px; font-size: large;"><b>+992 (37) 221 05 68</b></span><br>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">©️ 1991 - 2024, ОАО "Ориёнбонк"</span>
+    </footer>
+</body>
+</html>
