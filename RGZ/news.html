@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориёнбонк</title>
+    <link rel="stylesheet" href="../mainrgz.css">
+    <link rel="shortcut icon" href="../faviconrgz.ico" type="image/x-icon">
+    <style>
+        .new1{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+            z-index: auto;
+        }
+        .button{
+            background-color: #ebeb05;
+            color: #020202;
+            padding: 5px;
+            text-align: center;
+            border-radius: 3px;
+            border-color: white;
+        }
+        .new2{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 90%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+            z-index: auto;
+        }
+        .new3{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 210%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new4{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 330%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new5{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 450%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new6{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 570%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new7{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 690%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new8{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 810%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new9{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 930%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .new10{
+            background-color: white; 
+            height: 110px; 
+            width: 1270px; 
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, 1050%);
+            position: absolute;
+            transition: all 0.5s;
+            min-height:200px;
+        }
+        .visible{
+            background-color: rgb(17, 17, 17); 
+            height: 185px; 
+            width: 400px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(30%, 1170%);
+            opacity: 0;
+        }
+    </style>
+    <script>
+    function toggleMenu() {
+        let menuPanel = document.getElementById("menu-panel");
+        if (menuPanel.style.display === "none") {
+            menuPanel.style.display = "block";
+        } 
+        else {
+            menuPanel.style.display = "none";
+        }
+        }
+    </script>
+</head>
+<body style="overflow: scroll;">
+    <header>
+    <img src="orion.png" alt="Ориёнбонк" style="margin: 0px 0px 0px 100px;">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-panel" id="menu-panel">
+        <ul>
+            <li><a href="Company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="Contact_information.html">Контактная информация</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </div>
+    </header>
+    <h2 style="margin: -110px 0px 0px 125px; color: #68625d; font-size: 24px;" ><a href="Company.html"><u>Главная</u></a></h2>
+    <h1 style="margin: 0px 0px 310px 125px; font-size: 40px; font-family: 37px;">Все новости</h1>
+    <div class="new1">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">5/1/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Остерегайтесь мошенников!</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            Уважаемые клиенты, в последнее время стали использоваться новые методы мошенничества для заманивания граждан через интернет-сайты...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW1.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new2">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">5/1/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Платежная система Western Union приостановит работу в РФ и Республике Беларусь</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">Переводы, отправленные через систему денежных переводов из Российской Федерации...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW2.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new3">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">5/1/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">ОАО "Ориенбанк" просит Вас быть бдительными и не верить фейковым письмам и сообщениям</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            В сети распространяется ложное сообщение от имени Ориенбанка о вашем выигрыше с определенной суммой...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW3.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new4">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">5/1/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Уважаемые клиенты, доводим до Вашего сведения, что с 10 марта 2022г. на территории Российской Федерации все операции по картам МПС VISA приостановлены</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            "Если Вы являетесь держателем карты VISA и планируете поездку в РФ, рекомендуем Вам заранее совершить все онлайн операции...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW4.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new5">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Вниманию клиентов -пользователей платежной системы Юнистрим!</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            В связи с санкциями, введенными в отношении оператора платежной системы Юнистрим - АБТ «Юнистрим», начиная с 30 сентября 2023 года...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW5.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new6">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Внимание! ОАО "Ориёнбанк" объявляет акцию в честь своего 30-летия!</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            Спешим обрадовать вас очередной акцией ""Легкий выигрыш"", которая будет проводиться среди всех держателей карт Visa и Корти Милли от ОАО ""Ориенбанк""...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW6.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new7">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">КЕШБЭК1% на любой безналичный платёж на территории РТ</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            С 1 августа оплачивай покупки и услуги картами Виза и Корти милли от Ориёнбонк и получай кешбэк...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW7.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new8">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Праздник Навруз является символом обновления</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            Руководство Ориёнбанка в рамках поддержки студентов и повышения их финансовой грамотности предоставила учебные книги...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW8.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new9">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Доводим до Вашего сведения, что ОАО «Ориенбанк» выступает банком-агентом для выплаты возмещения вкладчикам ОАО «Таджиксодиротбанк»</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            Вкладчики или их законные представители могут обратиться за компенсацией в ОАО «Ориенбанк» и его филиалы...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW9.html">Узнать подробнее</a></button>
+    </div>
+    <div class="new10">
+        <p style="color: #68625d; font-size: 15px; margin: 25px 0px 0px 51px">4/30/2024</p>
+        <h1 style="color: #0c0a09; font-size: 23px; margin: 10px 0px 0px 50px">Временные сбои в магистральном канале провайдера</h1>
+        <p class="text" style="color: #68625d; font-size: 19px; margin: 5px 0px 0px 50px">
+            В связи со сбоями на магистральном канале провайдера связи на территории Республики Казахстан, оповещаем вас о трудностях в работе...
+        </p>
+        <button class="button" style="margin: 10px 0px 0px 50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><a href="NEW10.html">Узнать подробнее</a></button>
+    </div>
+    <div class="visible">
+    </div>
+    <footer>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">Республика Таджикистан, г. Душанбе, проспект Рудаки 95/1</span> <img src="soc.png" height="47px" width="165px" style="margin: -15px 0px 0px 1300px; position: absolute; display: block;"><br>
+        <span style="margin: 0px 0px 0px 40px;">К/С: 20402972413691, ИНН: 020003038, БИК: 350101369</span><br>
+        <span style="margin: 0px 0px 0px 40px;">Эл. адрес: info@orienbank.tj</span>
+        <span style="margin: -20px 0px 0px 400px; font-size: large;"><b>+992 (37) 221 05 68</b></span><br>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">©️ 1991 - 2024, ОАО "Ориёнбонк"</span>
+    </footer>
+</body>
+</html>
