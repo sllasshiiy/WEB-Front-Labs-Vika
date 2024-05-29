@@ -20,3 +20,12 @@ function showDate(){
     document.getElementById("date").innerText = "Текущая дата: " + today;
     document.getElementById("day").innerText = "День недели: " + day;
 }
+function getDayOfWeek() {
+    const inputDate = parseInt(document.getElementById('inputDate').value);
+    const inputMonth = parseInt(document.getElementById('inputMonth').value) - 1; // месяцы в объекте Date начинаются с нуля
+    const inputYear = parseInt(document.getElementById('inputYear').value);
+    const selectedDate = new Date(inputYear, inputMonth, inputDate);
+    const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    const dayOfWeek = days[selectedDate.getDay()];
+    document.getElementById('dayOfWeek').textContent = `Выбранная дата - ${dayOfWeek}`;
+}
