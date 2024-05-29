@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориёнбонк</title>
+    <link rel="stylesheet" href="../mainrgz.css">
+    <link rel="shortcut icon" href="../faviconrgz.ico" type="image/x-icon">
+    <style>
+        .cal{
+            background-color: white; 
+            height: 450px; 
+            width: 1000px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h3{
+            display: inline;
+            margin: 5px 0px 0px 120px;
+        }
+        .video{
+            margin: 20px 0px 0px 160px;
+            display: block;
+            text-align: center;
+        }
+        .button{
+            background-color: #ebeb05;
+            color: #020202;
+            padding: 5px;
+            text-align: center;
+            border-radius: 3px;
+            border-color: white;
+        }
+    </style>
+    <script>
+    function toggleMenu() {
+        let menuPanel = document.getElementById("menu-panel");
+        if (menuPanel.style.display === "none") {
+            menuPanel.style.display = "block";
+        } 
+        else {
+            menuPanel.style.display = "none";
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+    <img src="orion.png" alt="Ориёнбонк" style="margin: 0px 0px 0px 100px;">
+    <h3>Частным лицам</h3>
+    <h3>Крупный бизнес</h3>
+    <h3>Ориён-лизинг</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-panel" id="menu-panel">
+        <ul>
+            <li><a href="Company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="Contact_information.html">Контактная информация</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </div>
+    </header>
+    <div class="cal">
+        <h1 style="color: #0c0a09; font-size: 40px; margin: 18px 0px 0px 290px">Видеоролик о компании </h1>
+        <video class="video" height="300" width="700" controls="controls" autoplay loop poster="Ориёнбонк.jpg">
+        <source src="Ориенбанк - история достижений длиной в 30 лет.mp4"type="video/mp4">
+    </video>
+    <button class="button" style="margin: 10px 0px 0px 50px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="Company.html">Назад</a></button>
+    <br>    
+    </div>
+    <footer>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">Республика Таджикистан, г. Душанбе, проспект Рудаки 95/1</span> <img src="soc.png" height="47px" width="165px" style="margin: -15px 0px 0px 1300px; position: absolute; display: block;"><br>
+        <span style="margin: 0px 0px 0px 40px;">К/С: 20402972413691, ИНН: 020003038, БИК: 350101369</span><br>
+        <span style="margin: 0px 0px 0px 40px;">Эл. адрес: info@orienbank.tj</span>
+        <span style="margin: -20px 0px 0px 400px; font-size: large;"><b>+992 (37) 221 05 68</b></span><br>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">©️ 1991 - 2024, ОАО "Ориёнбонк"</span>
+    </footer>
+</body>
+</html>
