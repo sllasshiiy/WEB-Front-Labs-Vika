@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориёнбонк</title>
+    <link rel="stylesheet" href="../mainrgz.css">
+    <link rel="shortcut icon" href="../faviconrgz.ico" type="image/x-icon">
+    <style>
+        .cal{
+            background-color: white; 
+            height: 320px; 
+            width: 950px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            z-index: 0;
+        }
+        h3{
+            display: inline;
+            margin: 5px 0px 0px 120px;
+        }
+        .button{
+            background-color: #ebeb05;
+            color: #020202;
+            padding: 5px;
+            text-align: center;
+            border-radius: 3px;
+            border-color: white;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+    <script>
+    function toggleMenu() {
+    let menuPanel = document.getElementById("menu-panel");
+    if (menuPanel.style.display === "none") {
+        menuPanel.style.display = "block";
+    } 
+    else {
+        menuPanel.style.display = "none";
+    }
+    }
+    function convertCurrency() {
+    const amount = document.getElementById('amount').value;
+    const currency = document.getElementById('currency').value;
+
+    fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+        .then(response => response.json())
+        .then(data => {
+            if (currency === 'rub') {
+                const rate = data.Valute.KGS.Value;
+                const result = (amount / rate).toFixed(2);
+                document.getElementById('result').textContent = result + ' KGS';
+            } else if (currency === 'kgs') {
+                const rate = data.Valute.KGS.Value;
+                const result = (amount * rate).toFixed(2);
+                document.getElementById('result').textContent = result + ' ₽';
+            } else {
+                document.getElementById('result').textContent = 'Выберите валюту';
+            }
+        })
+        .catch(error => console.error('Ошибка загрузки курса валют:', error));
+    }
+    </script>
+</head>
+<body>
+    <header>
+    <img src="orion.png" alt="Ориёнбонк" style="margin: 0px 0px 0px 100px;">
+    <h3>Частным лицам</h3>
+    <h3>Крупный бизнес</h3>
+    <h3>Ориён-лизинг</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-panel" id="menu-panel">
+        <ul>
+            <li><a href="Company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="Contact_information.html">Контактная информация</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </div>
+    </header>
+    <div class="cal">
+        <h1 style="color: #0c0a09; font-size: 40px; margin: 25px 0px 0px 290px">Калькулятор валют</h1>
+        <label style="margin: 30px 0px 0px 150px; font-size: large;">Введите сумму в рублях (₽):</label>
+        <input style="margin: 30px 0px 0px 40px;" type="number" id="amount" placeholder="Введите сумму">
+        <select id="currency">
+            <option value="rub">Рубли (₽)</option>
+            <option value="kgs">Сом (KGS)</option>
+        </select>
+        <p style="margin: 30px 0px 0px 150px; font-size: large;">Результат: <span id="result"></span></p>
+        <button style="margin: 50px 0px 0px 350px;" class="button" onclick="convertCurrency()"><b>Конвертировать</b></button>
+    </div>
+    <footer>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">Республика Таджикистан, г. Душанбе, проспект Рудаки 95/1</span> <img src="soc.png" height="47px" width="165px" style="margin: -15px 0px 0px 1300px; position: absolute; display: block;"><br>
+        <span style="margin: 0px 0px 0px 40px;">К/С: 20402972413691, ИНН: 020003038, БИК: 350101369</span><br>
+        <span style="margin: 0px 0px 0px 40px;">Эл. адрес: info@orienbank.tj</span>
+        <span style="margin: -20px 0px 0px 400px; font-size: large;"><b>+992 (37) 221 05 68</b></span><br>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">©️ 1991 - 2024, ОАО "Ориёнбонк"</span>
+    </footer>
+</body>
+</html>
