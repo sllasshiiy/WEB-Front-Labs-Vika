@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориёнбонк</title>
+    <link rel="stylesheet" href="../mainrgz.css">
+    <link rel="shortcut icon" href="../faviconrgz.ico" type="image/x-icon">
+    <style>
+        .cal{
+            background-color: white; 
+            height: 350px; 
+            width: 1000px; 
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+        }
+        h3{
+            display: inline;
+            margin: 5px 0px 0px 120px;
+        }
+    </style>
+    <script>
+    function toggleMenu() {
+        let menuPanel = document.getElementById("menu-panel");
+        if (menuPanel.style.display === "none") {
+            menuPanel.style.display = "block";
+        } 
+        else {
+            menuPanel.style.display = "none";
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+    <img src="orion.png" alt="Ориёнбонк" style="margin: 0px 0px 0px 100px;">
+    <h3>Частным лицам</h3>
+    <h3>Крупный бизнес</h3>
+    <h3>Ориён-лизинг</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-panel" id="menu-panel">
+        <ul>
+            <li><a href="Company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="Contact_information.html">Контактная информация</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </div>
+    </header>
+    <div class="cal">
+        <h1 style="color: #0c0a09; font-size: 40px; margin: 25px 0px 0px 290px">Контактные данные</h1>
+        <h2 style="color: #0c0a09; font-size: 20px; margin: 25px 0px 0px 40px;position: absolute; display: block;">Рабочее время</h2>
+        <p style="color: #0c0a09; font-size: 17px; margin: 45px 0px 0px 40px; position: absolute; display: block;">
+            <br>
+            Рабочие дни: с понедельника по пятницу с 08:00 до 17:00
+            <br>
+            <br>
+            Суббота: с 09:00 до 12:00
+            <br>
+            <br>
+            Воскресенье: выходной
+            <br>
+            <br>
+            Прием граждан: каждую субботу
+        </p>
+        <p style="color: #0c0a09; font-size: 17px; margin: 0px 0px 150px 600px">
+            <br>
+            <b>2222</b><br>
+            Для звонков по Таджикистану
+            <br>
+            <br>
+            <b>+992 (37) 221 05 68</b><br>
+            <b>+992 44 610 22 00</b><br>
+            Для звонков из любой точки мира
+            <br>
+            <br>
+            <b>+992 44 600 15 20</b><br>
+            Горячая линия Национального Банка Таджикистана
+        </p>
+    </div>
+    <footer>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">Республика Таджикистан, г. Душанбе, проспект Рудаки 95/1</span> <img src="soc.png" height="47px" width="165px" style="margin: -15px 0px 0px 1300px; position: absolute; display: block;"><br>
+        <span style="margin: 0px 0px 0px 40px;">К/С: 20402972413691, ИНН: 020003038, БИК: 350101369</span><br>
+        <span style="margin: 0px 0px 0px 40px;">Эл. адрес: info@orienbank.tj</span>
+        <span style="margin: -20px 0px 0px 400px; font-size: large;"><b>+992 (37) 221 05 68</b></span><br>
+        <hr>
+        <span style="margin: 0px 0px 0px 40px;">©️ 1991 - 2024, ОАО "Ориёнбонк"</span>
+    </footer>
+</body>
+</html>
