@@ -6,19 +6,77 @@
     <title>Загородняя Виктория. Лабораторная работа №6</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.16*16.png">
-    <link rel="icon" href="../favicon.32x32.png">
     <style>
         .game{
             margin: 0 auto;
             cursor: pointer;
-            border: 3px solid;
+            justify-content: center;
+            border: 3px rgb(9, 98, 98);
             border-radius: 10px;
             padding: 7px;
             background-color: rgba(140, 234, 234, 0.535);
             text-align: center;
         }
+        .btn{
+            margin-top: 10%;
+        }
     </style>
+    <script>
+        let number;
+        let count=0;
+        function startGame(){
+            number=Math.floor(Math.random()*100)+1;
+            let screens=document.getElementsByClassName('game');
+            screens[0].style.display='none';
+            screens[1].style.display='block';
+        }
+        function guess(){
+            count++;
+            let input=document.getElementById('user-number');
+            let userNumber=parseInt(input.value);
+            let message=document.getElementById('result');
+            if(userNumber<1 || userNumber>100){
+                message.innerHTML='Число должно быть в диапозоне от 1 до 100!';
+            }
+            else if (userNumber>number){
+                message.innerHTML='Вы ввели слишком большое число';
+            }
+            else if(userNumber<number){
+                message.innerHTML='Вы ввели слишком маленькое число';
+            }
+            
+            else if(isNaN(userNumber)){
+                message.innerHTML='Поле должно быть заполнено!';
+            }
+            else{
+                let screens=document.getElementsByClassName('game');
+                screens[1].style.display='none';
+                screens[2].style.display='block';
+                document.getElementById('number').innerText=number;
+                document.getElementById('try-count').innerHTML=count;
+            }
+        }
+        function again(params){
+            let screens=document.getElementsByClassName('game');
+            screens[2].style.display='none';
+            screens[1].style.display='block';
+            count=0;
+            input=0;
+            result=0;
+            number=Math.floor(Math.random()*100)+1;
+        }
+        function showRules() {
+            document.getElementById('showRulesButton').style.display = 'none';
+            document.getElementById('hideRulesButton').style.display = 'block';
+            document.getElementById('rules').style.display = 'block';
+        }
+
+        function hideRules() {
+            document.getElementById('hideRulesButton').style.display = 'none';
+            document.getElementById('showRulesButton').style.display = 'block';
+            document.getElementById('rules').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -27,20 +85,20 @@
 
     <main>
         <div class="game" style="margin: 10px 20px 10px 30px; width: 230px; height: 30px;" >
-            <button>
+            <button onclick="startGame()">
                 Сыграть в игру
             </button>
         </div>
-        <div class="game" style="margin: 10px 20px 10px 30px;">
+        <div class="game" style="margin: 10px 20px 10px 30px; display: none;">
             <h1>Угадай число</h1>
             <div>
                 Задумано число от 1 до 100. Угадайте, какое?<br>
-                <input type="number" value="" min="1" max="100"><br>
-                <button>Угадать</button>
+                <input type="number" value="" min="1" max="100" id="user-number"><br>
+                <button onclick="guess()">Угадать</button>
                 <div id="result"></div>
             </div>
         </div>
-        <div class="game" style="margin: 10px 20px 10px 30px;">
+        <div class="game" style="margin: 10px 20px 10px 30px; display:none">
             <h1>Поздравляем, вы выиграли!</h1>
             <div>
                 Задуманое число :<span id="number"></span>
@@ -49,9 +107,23 @@
                 Количество попыток:<span id="try-count"></span>
             </div>
             <div>
-                <button>Сыграть еще раз</button>
+                <button onclick="again()">Сыграть еще раз</button>
             </div>
-            </div>
+        </div>
+        <button class="btn" id="showRulesButton" onclick="showRules()" >Показать правила игры</button>
+        <button class="btn" id="hideRulesButton" style="display: none;" onclick="hideRules()">Скрыть правила игры</button>
+        <div id="rules" style="display: none;" style="background-color: azure; border: 2px solid  rgba(204, 229, 229, 0.562);">
+            <h2>Правила игры:</h2>
+            <p>
+                <ol type="A">
+                    <li>Для начала игры нажмите кнопку "Сыграть в игру"</li>
+                    <li>Введите число от 1 до 100, которое мог бы загадать компьютер</li>
+                    <li>Внизу будет подсказка нужно ли ввести число меньше или больше</li>
+                    <li>Когда вы угадали число,вы можете посмотреть свое количество попыток</li>
+                    <li>Чтобы сыграть еще раз, нажмите на кнопку "Сыграть еще раз"</li>
+                </ol>
+            </p>
+        </div>
     </main>  
     <footer>
         &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024

@@ -36,9 +36,9 @@
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('tempAt8').textContent = data.data[0].temperature_2m + ' °C';
-                    document.getElementById('tempAt12').textContent = data.data[4].temperature_2m + ' °C';
-                    document.getElementById('tempAt20').textContent = data.data[10].temperature_2m + ' °C';
+                    document.getElementById('tempAt8').textContent = data.hourly.temperature_2m[0] + ' °C';
+                    document.getElementById('tempAt12').textContent = data.hourly.temperature_2m[4] + ' °C';
+                    document.getElementById('tempAt20').textContent = data.hourly.temperature_2m[10] + ' °C';
                 })
             .catch(error => console.error('Произошла ошибка: ', error));
         }

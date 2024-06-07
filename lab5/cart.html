@@ -18,7 +18,7 @@ function calculateresult() {
   
   document.getElementById('result').innerText = `Общий результат: ${result} руб`;
 }
-function clear() {
+function clear_() {
   document.getElementById('apple').value ='';
   document.getElementById('pears').value ='';
   document.getElementById('oranges').value ='';
@@ -39,6 +39,8 @@ function clear() {
     }
     p{
         color: rgb(139, 16, 16);
+        font-size: 25px;
+        font-weight: bold;
     }
 </style>
 </head>
@@ -70,7 +72,7 @@ function clear() {
 </div>
 
 <button onclick="calculateresult()">Рассчитать</button>
-<button onclick="clear()">Очистить</button>
+<button onclick="clear_()">Очистить</button>
 
 <p id="result"></p>
 </main>

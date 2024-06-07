@@ -30,13 +30,13 @@
             let apple = document.getElementById('apple').value || 0;  
             let result = (milk * 90) + (bread * 50) + (butter * 150) + (cheese * 200) + (sugar * 80)+ (tea * 120)+ (potato * 89)+ (apple * 170);
             if (milk<0 || bread<0 || butter<0 || cheese<0 || sugar<0 || tea<0 || potato<0 || apple<0){
-            alert('Кол-во товаров не может быть отрицательным!');
+                alert('Кол-во товаров не может быть отрицательным!');
             }
-            else if (result>balance || result==balance){
-            document.getElementById('Mistake').innerText = `У вас недостаточно средств!`;
+            else if (result>balance){
+                document.getElementById('Mistake').innerText = `У вас недостаточно средств!`;
             }
             else if (milk=='' && bread=='' && butter=='' &&  cheese=='' &&  sugar=='' &&  tea=='' &&  potato=='' && apple==''){
-            alert('Нужно выбрать хотя бы один товар');}
+                alert('Нужно выбрать хотя бы один товар');}
             else{
                 document.getElementById('result').innerText = `Итог: ${result} руб. Оплата прошла, можете забрать покупки с кассы.`;
             }  

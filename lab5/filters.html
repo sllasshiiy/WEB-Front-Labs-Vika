@@ -30,9 +30,9 @@
             document.getElementById('Image').style.filter='grayscale(' + value + ')';
         }
         function huerotateChange(){
-            let value=document.getElementById('huerotateValue').value+'°';
+            let value=document.getElementById('huerotateValue').value+'deg';
             document.getElementById('huerotateOutput').innerText=value;
-            document.getElementById('Image').style.filter='huerotate(' + value + ')';
+            document.getElementById('Image').style.filter='hue-rotate(' + value + ')';
         }
         function invertChange(){
             let value=document.getElementById('invertValue').value+'%';
