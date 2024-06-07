@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородняя Виктория. Лабораторная работа №8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.16*16.png">
+    <link rel="icon" href="../favicon.32x32.png">
+    <style>
+        .info {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px; 
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+    </style>
+    <script src="lab8.js"></script>
+</head>
+<body onload="showDate()">
+    <header>
+        НГТУ, ФБ, Лабораторная работа 8
+    </header>
+
+    <main>
+        <div class="info">
+        <h1>Дата и время</h1>
+        <p><span id="current-date"></span></p>
+        <p><span id="year"></span></p>
+        <p><span id="month"></span></p>
+        <p><span id="date"></span></p>
+        <p><span id="day"></span></p>
+        <br>
+        <input id="inputDate" type="text" placeholder="дата">
+        <input id="inputMonth" type="text" placeholder="месяц">
+        <input id="inputYear" type="text" placeholder="год">
+        <button onclick="getDayOfWeek()">День недели</button>
+        <br>
+        <p id="dayOfWeek"></p>
+        </div>
+    </main>
+    
+    <footer>
+        &copy; Загородняя Виктория, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
